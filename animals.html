@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Animal Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- for jQuery cookies-->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"> <!--font family: Josefin Sans-->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" /> <!-- bootstrap library for responsive -->
+    <link rel="stylesheet" href="assets/css/feedback.css">   <!--css-->
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-8">
+
+                <h1 class="text-center mt-5 font-weight-bold">Animal Management</h1>
+                <hr class="bg-dark">
+                <h6 class="text-center">Please write your information below:</h6>
+                <h3 class="mt-4">Which branch are you register?</h3>
+
+                <!--form-->
+                <form>
+                    <label class="radio-inline"><input type="radio" name="experience" value="johor">Johor</label>
+                    <label class="radio-inline"><input type="radio" name="experience" value="kedah">Kedah</label>
+                    <label class="radio-inline"><input type="radio" name="experience" value="kl">Kuala Lumpur</label>
+                    <label class="radio-inline"><input type="radio" name="experience" value="penang">Penang</label>
+                    <label class="radio-inline"><input type="radio" name="experience" value="perak">Perak</label>
+                    <label class="radio-inline"><input type="radio" name="experience" value="selangor">Selangor</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3"></div>
+
+            <label class="col-md-2">Full Name*<br>
+                <input type="name" id="name" required placeholder="Eg. Sabosh"></label>
+
+            <label class="col-md-3">Species*<br>
+                <input type="text" id="species" required placeholder="Eg. Dog"></label>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3"></div>
+
+            <label class="col-md-2">Age*<br>
+                <input type="number" min="1" max="100" id="age" required placeholder="Eg. 1"></label>
+
+            <label class="col-md-3">Owner*<br>
+                <input type="name" id="owner" required placeholder="Eg. Mary Lim"></label>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3"></div>
+
+            <label class="col-md-8">Memo*<br>
+                <textarea id="memo" required placeholder="Write yor memo here" cols="48"
+                    rows="5"></textarea></label>
+        </div>
+
+        <p></p>
+
+        <div class="row">
+            <div class="col-md-3"></div>
+            <button type="submit">Submit Form</button>
+        </div>
+
+        </form>
+
+        <p></p>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <button onclick="window.location.href='index.html'">Back</button>
+        </div>
+
+    </div>
+
+
+    <!--cookies-->
+    <script>
+        $(function () {
+            $("form").submit(function (event) {
+                event.preventDefault();
+
+                var location = $("input[type='radio']:checked").val();
+                var name = $("#name").val();
+                var species = $("#species").val();
+                var owner= $("#owner").val();
+                var age = $("#age").val();
+                var memo = $("#memo").val();
+
+
+                var expDate = new Date();
+                expDate.setMinutes(expDate.getMinutes() + 5);
+
+                document.cookie = "location=" + location + "; expires=" + expDate.toUTCString();
+                document.cookie = "name=" + name + "; expires=" + expDate.toUTCString();
+                document.cookie = "species=" + species + "; expires=" + expDate.toUTCString();
+                document.cookie = "owner=" + owner + "; expires=" + expDate.toUTCString();
+                document.cookie = "age=" + age + "; expires=" + expDate.toUTCString();
+                document.cookie = "memo=" + memo + "; expires=" + expDate.toUTCString();
+
+                window.location.href = "cookies_animals.html";
+
+            });
+        });      
+    </script>
+
+</body>
+
+</html>

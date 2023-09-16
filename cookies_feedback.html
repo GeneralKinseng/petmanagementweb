@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" /> <!-- bootstrap library for responsive -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  <!--jQuery-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> <!--reponsive display-->
+    <link rel="stylesheet" href="assets/css/main.css" /> <!--Page layout and design for the nav bar and bg-->
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <a href="index.html" class="logo"><strong>XPAX-Pet</strong> <span>Website</span></a>
+            <nav>
+                <a href="#menu"></a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="index.html">Home </a></li>
+
+                <li><a href="states.html">Locations</a></li>
+
+                <li><a href="about-us.html">About Us</a></li>
+
+                <li><a href="contactus.html">Contact Us</a></li>
+
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main" class="alt">
+
+            <!-- One -->
+            <section id="one">
+                <div class="inner">
+                    <center>
+                    <header class="major">
+                        <h1>Thank you!</h1>
+                    </header>
+                    <p><b>Your response has been submitted.</b></p>
+                    <p>Thank you for being a valued customer. Providing you with a great experience is our top priority.</p>
+                </center>
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.scrolly.min.js"></script> <!--Menu-->
+    <script src="assets/js/browser.min.js"></script><!--Show nav tab-->
+    <script src="assets/js/breakpoints.min.js"></script><!--typical device breakpoint-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        $(function () {
+
+            //getCookie return empty string is cookie is not found
+            var rate = getCookie("rate");
+            var name = getCookie("name");
+            var email = getCookie("email");
+            var phoneno = getCookie("phone");
+            var age = getCookie("age");
+            var message = getCookie("message");
+
+            //one of the cookies is not found
+            if (rate == "" && name == "" && email == "" && phone == "" && subject == "" && message == "") {
+                window.location.href = "Feedback.html";
+            }
+
+
+        });
+
+        //function to get a cookies
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) { //loop the ca array
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length); //return value of the cookies
+                }
+            }
+            return "";
+        }
+    </script>
+</body>
+
+</html>

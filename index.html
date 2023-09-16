@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MAIN PAGE</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body class="is-preload" onload="display();">
+    
+    <div id="container">
+      <div id="navbar">
+        <ul>
+          <li><a href="index.html" style="font-size: 1.5vw">Home</a></li>
+          <li><a href="states.html" style="font-size: 1.5vw">Locations</a></li>
+        </ul>
+
+        <div id="logo"><!--Logo-->
+          <span class="image">
+            <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+          </span>
+        </div>
+
+        <ol> <!--Management/About Us-->
+          <li><a href="management.html" style="font-size: 1.5vw">Management</a></li>
+          <li><a href="about-us.html" style="font-size: 1.5vw">About Us</a></li>
+        </ol>
+      </div>
+
+      <!--Image-->
+      <div id="sideimg" class="col-4">
+        <span class="index-image">
+          <img src="images/lookatyou.jpg" alt="lookatyou">
+        </span>
+      </div>
+
+      <!--Title-->
+      <div id="content" class="col-6">
+        <h2>XPAX-Pet Management</h2>
+        <p>
+          XPAX-Pet Management is a pet management website. We promote the pet management system for you!
+        </p>
+        <p>
+          We mainly allowing user to manage their system with different functions!
+          Flexible and Easy. 
+          To reach out more, kindly contact us!
+        </p>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+      <!-- Locations -->
+      <section class="tiles">
+        <article>
+          <span class="image">
+            <img src="images/penang.png" alt="" />
+          </span>
+
+          <header class="major">
+
+
+            <h3>Penang</h3>
+
+
+            <div class="major-actions">
+              <a href="penang.html" class="button small next">View Locations</a>
+            </div>
+          </header>
+        </article>
+
+        <article>
+          <span class="image">
+            <img src="images/perak.png" alt="" />
+          </span>
+
+          <header class="major">
+
+
+            <h3>Perak</h3>
+
+
+            <div class="major-actions">
+              <a href="perak.html" class="button small next">View Locations</a>
+            </div>
+          </header>
+        </article>
+
+        <article>
+          <span class="image">
+            <img src="images/selangor.png" alt="" />
+          </span>
+
+          <header class="major">
+
+
+            <h3>Selangor</h3>
+
+
+            <div class="major-actions">
+              <a href="selangor.html" class="button small next">View Locations</a>
+            </div>
+          </header>
+        </article>
+
+        <article>
+          <span class="image">
+            <img src="images/johor.png" alt="" />
+          </span>
+
+          <header class="major">
+
+            <h3>Johor</h3>
+
+            <div class="major-actions">
+              <a href="johor.html" class="button small next">View Locations</a>
+            </div>
+          </header>
+        </article>
+
+        <article>
+          <span class="image">
+            <img src="images/kl.png" alt="" />
+          </span>
+
+          <header class="major">
+
+            <h3>Kuala Lumpur</h3>
+
+            <div class="major-actions">
+              <a href="kl.html" class="button small next">View Locations</a>
+            </div>
+          </header>
+        </article>
+
+        <article>
+          <span class="image">
+            <img src="images/kedah.png" alt="" />
+          </span>
+
+          <header class="major">
+
+            <h3>Kedah</h3>
+
+            <div class="major-actions">
+              <a href="kedah.html" class="button small next">View Locations</a>
+            </div>
+          </header>
+        </article>
+      </section>
+
+      <section>
+        <div class="inner">
+          <header class="major">
+            <h2>About us</h2>
+          </header>
+          <p>
+            <b><i>XPAX-Pet</i></b> is a website that provide pet management system. 
+            At XPAX-Pet, we are providing service in several states in West Malaysia
+            . XPAX-Pet providing professional IT support while you need. Simply have a 
+            call to reach us!
+          </p>
+          <ul class="actions">
+            <li><a href="about-us.html" class="button next">Read more</a></li>
+          </ul>
+          <header class="major">
+        </div>
+        <div class="inner">
+          <header class="major">
+            <h2>Feedback</h2>
+          </header>
+          <p>
+            <b><i>XPAX-Pet</i></b> need your feedback to improve!
+          </p>
+          <ul class="actions">
+            <li><a href="Feedback.html" class="button next">Kindly Drop Your Feedback Here!</a></li>
+          </ul>
+        </div>
+        
+      </section>
+    </div>
+
+    <script>
+      function display() {
+        // Check if the user's choice is already saved in local storage
+        var cookiesEnabled = localStorage.getItem('cookiesEnabled');
+
+        if (cookiesEnabled === null) {
+          // If cookiesEnabled is not set in local storage, show the confirmation dialog
+          var result = confirm("Press OK to allow cookies!");
+           if (result == true) {
+            alert("Cookies are enabled.");
+            // Save the choice in local storage
+            localStorage.setItem('cookiesEnabled', 'true');
+          } 
+          else {
+            alert("Cookies are disabled.");
+            // Save the choice in local storage
+            localStorage.setItem('cookiesEnabled', 'false');
+            // Redirect to a 404 page
+            window.location.replace("404.html");
+          }
+        } 
+        else {
+          // If cookiesEnabled is already set in local storage, use that value
+          if (cookiesEnabled === 'true') {
+             
+          } else {
+            alert("Cookies are disabled.");
+            // Redirect to a 404 page
+            window.location.replace("404.html");
+            }
+        }
+      }
+    </script>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
