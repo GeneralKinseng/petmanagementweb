@@ -1,0 +1,56 @@
+body{
+	background: #242943;
+	width: 100%;
+	height: 100vh;
+	font-family: 'josefin Sans', Sans-serif;
+}
+
+.container{
+	background: #141429;
+	width: 100%;
+	height: 100%;
+}
+
+.radio-inline{
+	margin: 0px 40px 20px 0px; 
+	cursor: pointer;
+}
+
+label, h1, h6, h3{
+	color: rgb(255, 255, 255);
+}
+
+#age, #email, #name, #phone{
+	height: 40px;
+	border-radius: 5px;
+	padding-left: 10px;
+	font-size: 14px;
+	border: none;
+	width: 100%;
+	color: #000;
+}
+
+#message{
+	outline: none;
+	border: none;
+	padding: 10px 0px 0px 15px;
+	font-size: 16px;
+	color:#000;
+	border-radius: 5px;
+	width: 100%
+}
+
+button{
+	background-color: rgb(57, 194, 235);
+	color:rgb(0, 0, 0);
+	width: 49%; 
+	position: relative;
+	border-radius: 12px;
+}
+
+button:hover {
+	background-color: #4CAF50;
+	color: white;
+  }
+
+  
